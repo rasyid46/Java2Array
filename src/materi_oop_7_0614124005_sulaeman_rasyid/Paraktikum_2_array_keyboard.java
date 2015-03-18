@@ -8,26 +8,28 @@ import java.util.Scanner;
 
 /**
  *
- * @author uyee
+ * @author Sulaeman Rasyid
  */
 public class Paraktikum_2_array_keyboard {
 
-    public static void main(String[] args) {
-        int[] A = new int[11];
-        int[] B = new int[11];
-        Scanner reader = new Scanner(System.in);
-        for (int i = 0; i < A.length; i++) {
-            try {
-                char firstInitial =(char)-1;
-                firstInitial = (char)System.in.read();
-               B[i]= firstInitial;
-            } catch (Exception e) {
-                System.out.println("error");
+     public static void main(String[] args) {
+        // TODO code application logic here
+        int A[] = new int[11];//{1,2,4,8,16,64,128,256,512,1024};
+        Scanner input = new Scanner(System.in);
+
+        try {
+            System.out.println("Masukkan nilai array : ");
+            for (int i = 0; i < A.length; i++) {
+                System.out.print("A[" + i + "] = ");
+                A[i] = input.nextInt();
             }
+        } catch (Exception e) {
         }
 
-        for (int j = 0; j < B.length; j++) {
-            System.out.println("ss"+B[j]);
+        System.out.println("\n------------------------------\nNilai array adalah : ");
+        for (int i = 0; i < A.length; i++) {
+            System.out.println("A["+i+"] = " + A[i]);
         }
+
     }
 }
